@@ -130,10 +130,6 @@ export const Navigation = () => {
               ))}
             </div>
 
-            <div className="hidden md:block">
-              <ShinyButton text="Get Started" primary to="/for-individuals" />
-            </div>
-
             {/* Mobile Toggle */}
             <button className="md:hidden text-white" onClick={() => setIsMenuOpen(!isMenuOpen)}>
               {isMenuOpen ? <X /> : <Menu />}
