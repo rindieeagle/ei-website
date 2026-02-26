@@ -106,12 +106,12 @@ const ForTherapistsPage = () => {
 
       <section className="relative z-10 py-16 px-6">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-serif mb-6">Join the Skill Academy</h2>
+          <h2 className="text-3xl font-serif mb-6">Check out Therapist Resources</h2>
           <p className="text-slate-400 mb-8">
             Access our complete library of professional training and clinical resources.
           </p>
-          <a href="https://skill.encouragementink.com/" target="_blank" rel="noreferrer">
-            <ShinyButton text="Visit Skill Academy" primary />
+          <a href="https://therapistresources.com" target="_blank" rel="noreferrer">
+            <ShinyButton text="Visit Therapist Resources" primary />
           </a>
         </div>
       </section>

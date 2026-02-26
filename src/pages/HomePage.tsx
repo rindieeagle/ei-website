@@ -27,9 +27,9 @@ const HomePage = () => {
             transition={{ delay: 0.2 }}
             className="text-5xl md:text-7xl font-serif font-medium leading-tight mb-8"
           >
-            Act Before You <br />
+            Tools for <br />
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-orange-300 via-pink-300 to-teal-300 drop-shadow-[0_0_30px_rgba(236,72,153,0.3)] italic">
-              Feel Ready.
+              Courageous Movement.
             </span>
           </motion.h1>
 

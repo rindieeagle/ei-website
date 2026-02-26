@@ -1,8 +1,21 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Menu, X, ExternalLink } from 'lucide-react';
+import { ArrowRight, Menu, X } from 'lucide-react';
 import logo from '../assets/SQ_Square-EI-Assets-300SQ_Secondary-Logo-grain_Final.png';
+
+// 0. Coming Soon Banner
+export const ComingSoonBanner = () => (
+  <div className="fixed top-0 left-0 right-0 z-[100] bg-gradient-to-r from-pink-600 via-orange-500 to-pink-600 py-2 overflow-hidden">
+    <div className="animate-marquee whitespace-nowrap flex">
+      {[...Array(10)].map((_, i) => (
+        <span key={i} className="mx-8 text-white text-sm font-bold tracking-widest uppercase">
+          ✦ Coming Soon ✦ Under Construction ✦ Sneak Peek
+        </span>
+      ))}
+    </div>
+  </div>
+);
 
 // 1. The "Noise" Overlay for that textured, retro-print feel (matches logo grain)
 export const NoiseOverlay = () => (
@@ -170,9 +183,6 @@ export const Footer = () => (
       <h2 className="text-3xl md:text-5xl font-serif mb-8">Ready to turn insight into action?</h2>
       <div className="flex flex-col items-center justify-center gap-6">
         <ShinyButton text="Visit The Shop" primary />
-        <a href="https://skill.encouragementink.com/" target="_blank" rel="noreferrer" className="flex items-center gap-2 text-slate-400 hover:text-white transition-colors text-sm border-b border-transparent hover:border-slate-400 pb-1">
-          Visit Skill Academy <ExternalLink size={14} />
-        </a>
       </div>
       
       <div className="mt-20 pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center text-xs text-slate-500">
@@ -192,6 +202,7 @@ export const Footer = () => (
 // 8. Page Layout wrapper
 export const PageLayout = ({ children }: { children: React.ReactNode }) => (
   <div className="min-h-screen bg-[#0f1115] text-slate-100 font-sans selection:bg-pink-500 selection:text-white overflow-x-hidden">
+    <ComingSoonBanner />
     <NoiseOverlay />
     <BackgroundGradients />
     <Navigation />
