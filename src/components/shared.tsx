@@ -116,6 +116,7 @@ export const Navigation = () => {
     { label: 'Tools', path: '/tools' },
     { label: 'For Individuals', path: '/for-individuals' },
     { label: 'For Therapists', path: '/for-therapists' },
+    { label: 'Blog', path: '/blog' },
     { label: 'About', path: '/about' },
   ];
 
