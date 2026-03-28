@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { PageLayout } from '../components/shared';
 
 const POSTS_PER_PAGE = 9;
@@ -19,7 +19,7 @@ export default function BlogPage() {
 
   const categoryId = import.meta.env.VITE_WP_CATEGORY_ENCOURAGEMENT_INK || '4';
 
-  const getHeaders = () => {
+  const getHeaders = (): Record<string, string> => {
     const username = import.meta.env.VITE_WP_USERNAME;
     const appPassword = import.meta.env.VITE_WP_APP_PASSWORD;
     if (username && appPassword) {
