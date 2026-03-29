@@ -12,7 +12,7 @@ const AboutPage = () => {
     {
       icon: <Target className="text-orange-300" />,
       title: "Action Before Confidence",
-      description: "Confidence doesn't come before action—it follows it. We help you take courageous steps even when you don't feel ready."
+      description: "Confidence doesn't come before action. It follows it. We help you take courageous steps even when you don't feel ready."
     },
     {
       icon: <Sparkles className="text-teal-300" />,
@@ -42,13 +42,13 @@ const AboutPage = () => {
                 </h2>
                 <div className="space-y-6 text-slate-300 leading-relaxed">
                   <p>
-                    Encouragement Ink was born from a simple observation: most people know what they should do, but struggle to actually do it. This gap between insight and action is where real change happens—or doesn't.
+                    Encouragement Ink was born from a simple observation: most people know what they should do, but struggle to actually do it. This gap between insight and action is where real change happens. Or doesn't.
                   </p>
                   <p>
-                    Rooted in Adlerian psychology, we believe that every person is creative, capable, and whole. Our role isn't to fix you—it's to help you recognize the courage you already have and put it into motion.
+                    Rooted in Adlerian psychology, we believe that every person is creative, capable, and whole. Our role isn't to fix you. It's to help you recognize the courage you already have and put it into motion.
                   </p>
                   <p>
-                    Whether you're an individual trying to break free from overthinking and people-pleasing, or a clinician looking for tools to help your clients, we create resources that bridge the gap between knowing and doing.
+                    Whether you're an individual breaking free from overthinking, a clinician looking for better tools, or a brain professional deepening your training, we create resources that bridge the gap between knowing and doing.
                   </p>
                 </div>
               </div>
@@ -88,7 +88,7 @@ const AboutPage = () => {
             <div className="relative z-10">
               <h2 className="text-3xl font-serif mb-6">The Adlerian Foundation</h2>
               <p className="text-slate-300 mb-6 leading-relaxed max-w-2xl mx-auto">
-                Alfred Adler believed that all behavior is purposeful and that humans are driven by social interest and a desire to belong. Our tools help you understand your unique "lifestyle"—the patterns of thinking and behaving that shape your life—so you can make intentional changes.
+                Alfred Adler believed that all behavior is purposeful and that humans are driven by social interest and a desire to belong. Our tools help you understand your unique "lifestyle" (the patterns of thinking and behaving that shape your life) so you can make intentional changes. This foundation shapes everything we create, from individual courage tools to clinical resources to brain science training.
               </p>
               <blockquote className="text-xl italic text-slate-400 border-l-4 border-pink-500/50 pl-6 text-left max-w-xl mx-auto">
                 "It is easier to fight for one's principles than to live up to them."

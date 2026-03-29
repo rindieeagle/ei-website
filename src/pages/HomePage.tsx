@@ -1,5 +1,5 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { Sparkles, ArrowRight, Brain, Heart, Layers } from 'lucide-react';
+import { Sparkles, ArrowRight, Brain, Heart, Layers, BookOpen } from 'lucide-react';
 import { PageLayout, GlassCard, Glitter, ShinyButton } from '../components/shared';
 
 const HomePage = () => {
@@ -18,7 +18,7 @@ const HomePage = () => {
             className="inline-block mb-6 px-4 py-1 rounded-full border border-pink-500/30 bg-pink-500/10 text-pink-200 text-xs font-bold tracking-widest uppercase backdrop-blur-md"
           >
             <Sparkles className="inline w-3 h-3 mr-2 text-pink-400" />
-            Psychology-Based Tools
+            The Happy Brain Universe
           </motion.div>
           
           <motion.h1 
@@ -27,9 +27,9 @@ const HomePage = () => {
             transition={{ delay: 0.2 }}
             className="text-5xl md:text-7xl font-serif font-medium leading-tight mb-8"
           >
-            Tools for <br />
+            Encouragement <br />
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-orange-300 via-pink-300 to-teal-300 drop-shadow-[0_0_30px_rgba(236,72,153,0.3)] italic">
-              Courageous Movement.
+              Changes Everything.
             </span>
           </motion.h1>
 
@@ -39,8 +39,7 @@ const HomePage = () => {
             transition={{ delay: 0.4 }}
             className="text-lg md:text-xl text-slate-300 max-w-2xl mx-auto mb-12 leading-relaxed"
           >
-            Rooted in Adlerian principles, we help you close the gap between knowing and doing. 
-            Courage-based movement over waiting for confidence.
+            Courage-based, brain-informed tools rooted in Adlerian psychology. Whether you're stuck in your own head, helping clients get unstuck, or studying the brain itself, we build resources that close the gap between knowing and doing.
           </motion.p>
 
           <motion.div 
@@ -51,6 +50,7 @@ const HomePage = () => {
           >
             <ShinyButton text="I'm an Individual" primary to="/for-individuals" />
             <ShinyButton text="I'm a Therapist" to="/for-therapists" />
+            <ShinyButton text="I'm Studying the Brain" to="https://qeegenius.com" />
           </motion.div>
         </div>
 
@@ -69,8 +69,8 @@ const HomePage = () => {
 
       {/* Split Audience Section */}
       <section className="relative z-10 py-20 px-6">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8">
-          
+        <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
+
           {/* Individuals Card */}
           <GlassCard className="group p-10 hover:bg-white/10 transition-colors duration-500">
             <Glitter />
@@ -79,17 +79,17 @@ const HomePage = () => {
                 <Heart className="text-orange-300" />
               </div>
               <h3 className="text-3xl font-serif mb-4">For Individuals</h3>
-              <p className="text-slate-400 mb-6 h-24">
-                Struggling with overthinking, people-pleasing, or anxiety? Stop waiting to feel "ready." Get practical workbooks and interactive tools designed to turn insight into action.
+              <p className="text-slate-400 mb-6">
+                Struggling with overthinking, people-pleasing, or perfectionism? Stop waiting to feel "ready." Practical tools to turn insight into action.
               </p>
               <ul className="space-y-3 mb-8 text-sm text-slate-300">
-                <li className="flex gap-2"><div className="w-1.5 h-1.5 rounded-full bg-orange-400 mt-2"/> Interactive Courses</li>
-                <li className="flex gap-2"><div className="w-1.5 h-1.5 rounded-full bg-orange-400 mt-2"/> Visual Action Tools</li>
-                <li className="flex gap-2"><div className="w-1.5 h-1.5 rounded-full bg-orange-400 mt-2"/> Anxiety & Overthinking Resources</li>
+                <li className="flex gap-2"><div className="w-1.5 h-1.5 rounded-full bg-orange-400 mt-2"/> The Overthinking Interrupt</li>
+                <li className="flex gap-2"><div className="w-1.5 h-1.5 rounded-full bg-orange-400 mt-2"/> Motivation as Movement</li>
+                <li className="flex gap-2"><div className="w-1.5 h-1.5 rounded-full bg-orange-400 mt-2"/> People-Pleasing Recovery</li>
               </ul>
-              <div className="flex items-center text-orange-300 font-bold tracking-widest text-xs uppercase group-hover:translate-x-2 transition-transform">
+              <a href="/for-individuals" className="flex items-center text-orange-300 font-bold tracking-widest text-xs uppercase group-hover:translate-x-2 transition-transform">
                 Start Moving <ArrowRight className="ml-2 w-4 h-4" />
-              </div>
+              </a>
             </div>
           </GlassCard>
 
@@ -98,20 +98,42 @@ const HomePage = () => {
             <Glitter />
             <div className="relative z-10">
               <div className="w-12 h-12 rounded-full bg-teal-500/20 flex items-center justify-center mb-6 border border-teal-500/30">
-                <Brain className="text-teal-300" />
+                <BookOpen className="text-teal-300" />
               </div>
-              <h3 className="text-3xl font-serif mb-4">For Clinicians</h3>
-              <p className="text-slate-400 mb-6 h-24">
-                Enhance your practice with session-ready clinical tools. Specialized resources for Adlerian therapy, Neurofeedback, and QEEG training to help your clients progress.
+              <h3 className="text-3xl font-serif mb-4">For Therapists</h3>
+              <p className="text-slate-400 mb-6">
+                Practical tools, templates, and training to help you use AI and tech in your practice without adding clinical hours.
               </p>
               <ul className="space-y-3 mb-8 text-sm text-slate-300">
-                <li className="flex gap-2"><div className="w-1.5 h-1.5 rounded-full bg-teal-400 mt-2"/> Session-Ready Clinical Tools</li>
-                <li className="flex gap-2"><div className="w-1.5 h-1.5 rounded-full bg-teal-400 mt-2"/> QEEG / Neurofeedback Training</li>
-                <li className="flex gap-2"><div className="w-1.5 h-1.5 rounded-full bg-teal-400 mt-2"/> Professional Workbooks</li>
+                <li className="flex gap-2"><div className="w-1.5 h-1.5 rounded-full bg-teal-400 mt-2"/> SOAP Notes Training</li>
+                <li className="flex gap-2"><div className="w-1.5 h-1.5 rounded-full bg-teal-400 mt-2"/> Session-Ready Templates</li>
+                <li className="flex gap-2"><div className="w-1.5 h-1.5 rounded-full bg-teal-400 mt-2"/> AI for Therapists</li>
               </ul>
-              <div className="flex items-center text-teal-300 font-bold tracking-widest text-xs uppercase group-hover:translate-x-2 transition-transform">
-                View Resources <ArrowRight className="ml-2 w-4 h-4" />
+              <a href="https://therapistresources.com" target="_blank" rel="noopener noreferrer" className="flex items-center text-teal-300 font-bold tracking-widest text-xs uppercase group-hover:translate-x-2 transition-transform">
+                Visit Therapist Resources <ArrowRight className="ml-2 w-4 h-4" />
+              </a>
+            </div>
+          </GlassCard>
+
+          {/* QEEGenius Card */}
+          <GlassCard className="group p-10 hover:bg-white/10 transition-colors duration-500">
+            <Glitter />
+            <div className="relative z-10">
+              <div className="w-12 h-12 rounded-full bg-purple-500/20 flex items-center justify-center mb-6 border border-purple-500/30">
+                <Brain className="text-purple-300" />
               </div>
+              <h3 className="text-3xl font-serif mb-4">For Brain Professionals</h3>
+              <p className="text-slate-400 mb-6">
+                Studying QEEG or neurofeedback? Cheat sheets, study guides, and clinical tools for certification training.
+              </p>
+              <ul className="space-y-3 mb-8 text-sm text-slate-300">
+                <li className="flex gap-2"><div className="w-1.5 h-1.5 rounded-full bg-purple-400 mt-2"/> QEEG Cheat Sheets</li>
+                <li className="flex gap-2"><div className="w-1.5 h-1.5 rounded-full bg-purple-400 mt-2"/> EEG Interpretation Course</li>
+                <li className="flex gap-2"><div className="w-1.5 h-1.5 rounded-full bg-purple-400 mt-2"/> Board Exam Prep</li>
+              </ul>
+              <a href="https://qeegenius.com" target="_blank" rel="noopener noreferrer" className="flex items-center text-purple-300 font-bold tracking-widest text-xs uppercase group-hover:translate-x-2 transition-transform">
+                Visit QEEGenius <ArrowRight className="ml-2 w-4 h-4" />
+              </a>
             </div>
           </GlassCard>
 
@@ -142,13 +164,13 @@ const HomePage = () => {
           <div className="w-full md:w-1/2">
             <h2 className="text-4xl font-serif mb-6">Not just generic advice. <br/> <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-300 to-orange-300">Psychology in action.</span></h2>
             <p className="text-slate-300 mb-8 leading-relaxed">
-              Most self-help tells you to "be confident." We tell you to have courage. Encouragement Ink utilizes Adlerian psychology to help you understand your movement through life. Whether you are a clinician needing tools to explain complex brain maps, or a human trying to stop people-pleasing, we provide the visual, tangible resources to make it stick.
+              Most self-help tells you to "be confident." We tell you to have courage. Adlerian psychology teaches that all behavior is purposeful, that motivation is movement (not a feeling), and that encouragement is the most powerful force for change. Whether you're working on yourself, helping clients, or training your brain, that philosophy drives everything we build.
             </p>
             
             <div className="grid grid-cols-2 gap-4">
               {[
                 { label: "Adlerian Roots", desc: "Purpose-driven behavior" },
-                { label: "Neurofeedback", desc: "Brain-based approach" },
+                { label: "Brain-Informed", desc: "Grounded in neuroscience" },
                 { label: "Visual Tools", desc: "See it to believe it" },
                 { label: "Action First", desc: "Confidence follows" }
               ].map((item, i) => (

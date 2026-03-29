@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Heart, BookOpen, Lightbulb, Target, ArrowRight } from 'lucide-react';
+import { Heart, ArrowRight, Target, Zap, Move } from 'lucide-react';
 import { PageLayout, PageHeader, GlassCard, Glitter, ShinyButton } from '../components/shared';
 
 const ForIndividualsPage = () => {
@@ -7,22 +7,22 @@ const ForIndividualsPage = () => {
     {
       icon: <Heart className="text-orange-300" />,
       title: "Overthinking & Anxiety",
-      description: "Tools to help you break free from the cycle of anxious thoughts and move into purposeful action.",
+      description: "Break free from the cycle of anxious thoughts with The Overthinking Interrupt and the Over-functioning Bundle.",
     },
     {
       icon: <Target className="text-pink-300" />,
       title: "People-Pleasing Recovery",
-      description: "Learn to set boundaries and prioritize your own needs without guilt.",
+      description: "Set boundaries and prioritize your own needs without guilt. Start with The Approval Detox.",
     },
     {
-      icon: <Lightbulb className="text-teal-300" />,
-      title: "Confidence Building",
-      description: "Understand that confidence comes after action, not before. Start moving today.",
+      icon: <Zap className="text-teal-300" />,
+      title: "Over-Functioning & Boundaries",
+      description: "Stop doing everyone else's emotional labor. Tools to recognize the pattern and reclaim your energy.",
     },
     {
-      icon: <BookOpen className="text-purple-300" />,
-      title: "Interactive Workbooks",
-      description: "Hands-on exercises rooted in Adlerian psychology for lasting behavioral change.",
+      icon: <Move className="text-purple-300" />,
+      title: "Motivation & Movement",
+      description: "Motivation is not a feeling you wait for. It is movement you generate. Explore Motivation as Movement.",
     }
   ];
 
@@ -50,8 +50,9 @@ const ForIndividualsPage = () => {
                   You're not alone. Many people find themselves stuck in cycles of anxiety, people-pleasing, and waiting for the "right moment" to take action. Our tools are designed to help you break free from these patterns and start living with courage.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <ShinyButton text="Explore Resources" primary />
-                  <ShinyButton text="Take The Assessment" />
+                  <a href="https://reagleeagle.gumroad.com/" target="_blank" rel="noopener noreferrer">
+                    <ShinyButton text="Explore Resources" primary />
+                  </a>
                 </div>
               </div>
             </GlassCard>
@@ -89,7 +90,9 @@ const ForIndividualsPage = () => {
           <p className="text-slate-400 mb-8">
             Remember: Act before you feel ready. Confidence follows courage.
           </p>
-          <ShinyButton text="Get Started Now" primary />
+          <a href="https://reagleeagle.gumroad.com/" target="_blank" rel="noopener noreferrer">
+            <ShinyButton text="Browse The Shop" primary />
+          </a>
         </div>
       </section>
     </PageLayout>

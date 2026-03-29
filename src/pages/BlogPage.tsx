@@ -246,7 +246,7 @@ export default function BlogPage() {
             Articles &amp; Resources
           </h2>
           <p className="max-w-2xl mx-auto text-xl text-white/90">
-            Tools and ideas for building courage in everyday life.
+            Articles on courage, psychology, and the science of getting unstuck.
           </p>
         </div>
 

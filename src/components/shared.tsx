@@ -10,7 +10,7 @@ export const ComingSoonBanner = () => (
     <div className="animate-marquee whitespace-nowrap flex">
       {[...Array(10)].map((_, i) => (
         <span key={i} className="mx-8 text-white text-sm font-bold tracking-widest uppercase">
-          ✦ Coming Soon ✦ Under Construction ✦ Sneak Peek
+          ✦ Preview Mode ✦ Full Launch Coming Q2 2026 ✦
         </span>
       ))}
     </div>
@@ -184,17 +184,28 @@ export const Footer = () => (
       </div>
       <h2 className="text-3xl md:text-5xl font-serif mb-8">Ready to turn insight into action?</h2>
       <div className="flex flex-col items-center justify-center gap-6">
-        <ShinyButton text="Visit The Shop" primary />
+        <a href="https://reagleeagle.gumroad.com/" target="_blank" rel="noopener noreferrer">
+          <ShinyButton text="Visit The Shop" primary />
+        </a>
       </div>
-      
-      <div className="mt-20 pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center text-xs text-slate-500">
+
+      {/* The Happy Brain Universe */}
+      <div className="mt-16 pt-8 border-t border-white/5">
+        <p className="text-xs text-slate-500 uppercase tracking-widest mb-4">The Happy Brain Universe</p>
+        <div className="flex flex-wrap justify-center gap-6 text-sm">
+          <a href="/for-individuals" className="text-orange-300/70 hover:text-orange-300 transition-colors">For Individuals</a>
+          <a href="https://therapistresources.com" target="_blank" rel="noopener noreferrer" className="text-teal-300/70 hover:text-teal-300 transition-colors">Therapist Resources</a>
+          <a href="https://qeegenius.com" target="_blank" rel="noopener noreferrer" className="text-purple-300/70 hover:text-purple-300 transition-colors">QEEGenius</a>
+        </div>
+      </div>
+
+      <div className="mt-10 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center text-xs text-slate-500">
         <p>&copy; 2026 Encouragement Ink. All rights reserved.</p>
         <div className="flex flex-wrap justify-center gap-6 mt-4 md:mt-0">
            <a href="https://reagleeagle.com/privacy" target="_blank" rel="noreferrer" className="hover:text-slate-300">Privacy Policy</a>
            <a href="https://reagleeagle.com/terms" target="_blank" rel="noreferrer" className="hover:text-slate-300">Terms and Conditions</a>
            <a href="https://reagleeagle.com/cookies" target="_blank" rel="noreferrer" className="hover:text-slate-300">Cookie Policy</a>
            <a href="https://rindieme.formaloo.me/contact" target="_blank" rel="noreferrer" className="hover:text-slate-300">Contact</a>
-           <a href="https://reagleeagle.com" target="_blank" rel="noreferrer" className="hover:text-slate-300">Happy Brain Universe</a>
         </div>
       </div>
     </div>
