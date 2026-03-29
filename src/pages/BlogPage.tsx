@@ -4,6 +4,28 @@ import { PageLayout } from '../components/shared';
 const POSTS_PER_PAGE = 9;
 const TAGS_PER_PAGE = 15;
 const WP_BASE = 'https://blog.reagleeagle.com/wp-json/wp/v2';
+const CACHE_TTL = 5 * 60 * 1000; // 5 minutes
+
+function getCached<T>(key: string): { data: T; totalPages?: number } | null {
+  try {
+    const raw = sessionStorage.getItem(key);
+    if (!raw) return null;
+    const parsed = JSON.parse(raw);
+    if (Date.now() - parsed.ts > CACHE_TTL) {
+      sessionStorage.removeItem(key);
+      return null;
+    }
+    return parsed;
+  } catch {
+    return null;
+  }
+}
+
+function setCache(key: string, data: unknown, totalPages?: number) {
+  try {
+    sessionStorage.setItem(key, JSON.stringify({ data, totalPages, ts: Date.now() }));
+  } catch { /* storage full — ignore */ }
+}
 
 export default function BlogPage() {
   const [posts, setPosts] = useState<any[]>([]);
@@ -31,6 +53,13 @@ export default function BlogPage() {
   // Fetch tags relevant to this category only
   useEffect(() => {
     const fetchCategoryTags = async () => {
+      const cacheKey = `ei-blog-tags-${categoryId}`;
+      const cached = getCached<any[]>(cacheKey);
+      if (cached) {
+        setTags(cached.data);
+        return;
+      }
+
       try {
         const postsRes = await fetch(
           `${WP_BASE}/posts?status=publish&categories=${categoryId}&per_page=100&_fields=id,tags`,
@@ -54,7 +83,7 @@ export default function BlogPage() {
         if (topTagIds.length === 0) return;
 
         const tagsRes = await fetch(
-          `${WP_BASE}/tags?include=${topTagIds.join(',')}&per_page=100`,
+          `${WP_BASE}/tags?include=${topTagIds.join(',')}&per_page=100&_fields=id,name,slug`,
           { headers: getHeaders() }
         );
         if (!tagsRes.ok) return;
@@ -62,6 +91,7 @@ export default function BlogPage() {
         const tagsData = await tagsRes.json();
         tagsData.sort((a: any, b: any) => (tagCounts[b.id] || 0) - (tagCounts[a.id] || 0));
         setTags(tagsData);
+        setCache(cacheKey, tagsData);
       } catch (err) {
         console.error('Error fetching tags:', err);
       }
@@ -72,9 +102,18 @@ export default function BlogPage() {
   // Fetch posts when page or activeTag changes
   useEffect(() => {
     const fetchPosts = async () => {
+      const cacheKey = `ei-blog-posts-${categoryId}-${page}-${activeTag || 'all'}-${fetchKey}`;
+      const cached = getCached<any[]>(cacheKey);
+      if (cached) {
+        setPosts(cached.data);
+        setTotalPages(cached.totalPages || 1);
+        setLoading(false);
+        return;
+      }
+
       setLoading(true);
       try {
-        let url = `${WP_BASE}/posts?_embed&status=publish&categories=${categoryId}&per_page=${POSTS_PER_PAGE}&page=${page}`;
+        let url = `${WP_BASE}/posts?_embed&status=publish&categories=${categoryId}&per_page=${POSTS_PER_PAGE}&page=${page}&_fields=id,title,excerpt,date,link,_links,_embedded`;
         if (activeTag) {
           url += `&tags=${activeTag}`;
         }
@@ -90,6 +129,7 @@ export default function BlogPage() {
         setPosts(data);
         setTotalPages(wpTotalPages);
         setLoading(false);
+        setCache(cacheKey, data, wpTotalPages);
       } catch (err) {
         console.error('Error fetching posts:', err);
         setError('Failed to load blog posts.');
