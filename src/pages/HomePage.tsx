@@ -171,7 +171,7 @@ const HomePage = () => {
               {[
                 { label: "Adlerian Roots", desc: "Purpose-driven behavior" },
                 { label: "Brain-Informed", desc: "Grounded in neuroscience" },
-                { label: "For Visual Learners", desc: "See it to get it" },
+                { label: "Visual Tools", desc: "For visual learners" },
                 { label: "Action First", desc: "Confidence follows" }
               ].map((item, i) => (
                 <div key={i} className="p-4 border border-white/10 rounded-xl bg-white/5 hover:bg-white/10 transition-colors">
