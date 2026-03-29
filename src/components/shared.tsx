@@ -113,7 +113,8 @@ export const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
-    { label: 'Tools', path: '/tools' },
+    { label: 'Home', path: '/' },
+    // { label: 'Tools', path: '/tools' }, // Not ready yet
     { label: 'For Individuals', path: '/for-individuals' },
     { label: 'For Therapists', path: '/for-therapists' },
     { label: 'Blog', path: '/blog' },
