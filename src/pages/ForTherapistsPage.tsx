@@ -20,11 +20,11 @@ const ForTherapistsPage = () => {
                 </div>
 
                 <h1 className="text-4xl md:text-5xl font-serif font-medium mb-6">
-                  We built an entire planet for you.
+                  I built an entire planet for you.
                 </h1>
 
                 <p className="text-lg text-slate-300 mb-4 leading-relaxed max-w-xl mx-auto">
-                  Therapist Resources is our dedicated space for clinicians. Practical tools, SOAP notes training, session-ready templates, and strategies for using AI and tech in your practice.
+                  Therapist Resources is a dedicated space for clinicians. Practical tools, SOAP notes training, session-ready templates, and strategies for using AI and tech in your practice.
                 </p>
 
                 <p className="text-slate-400 mb-10 max-w-xl mx-auto">

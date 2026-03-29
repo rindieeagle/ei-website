@@ -199,7 +199,13 @@ export const Footer = () => (
         </div>
       </div>
 
-      <div className="mt-10 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center text-xs text-slate-500">
+      <div className="mt-8 pt-6 border-t border-white/5">
+        <p className="text-[10px] text-slate-600 text-center max-w-2xl mx-auto leading-relaxed mb-6">
+          Content provided by Encouragement Ink is for educational purposes only and does not constitute therapy, clinical advice, or a professional relationship. If you are in crisis, please contact 988 (Suicide &amp; Crisis Lifeline) or your local emergency services.
+        </p>
+      </div>
+
+      <div className="pt-6 border-t border-white/5 flex flex-col md:flex-row justify-between items-center text-xs text-slate-500">
         <p>&copy; 2026 Encouragement Ink. All rights reserved.</p>
         <div className="flex flex-wrap justify-center gap-6 mt-4 md:mt-0">
            <a href="https://reagleeagle.com/privacy" target="_blank" rel="noreferrer" className="hover:text-slate-300">Privacy Policy</a>

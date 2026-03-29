@@ -47,7 +47,7 @@ const ForIndividualsPage = () => {
                   Struggling with <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-300 to-pink-300">overthinking</span>?
                 </h2>
                 <p className="text-slate-300 mb-8 leading-relaxed">
-                  You're not alone. Many people find themselves stuck in cycles of anxiety, people-pleasing, and waiting for the "right moment" to take action. Our tools are designed to help you break free from these patterns and start living with courage.
+                  You're not alone. Many people find themselves stuck in cycles of anxiety, people-pleasing, and waiting for the "right moment" to take action. These tools are designed to help you break free from those patterns and start living with courage.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <a href="https://reagleeagle.gumroad.com/" target="_blank" rel="noopener noreferrer">

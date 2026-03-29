@@ -39,7 +39,7 @@ const HomePage = () => {
             transition={{ delay: 0.4 }}
             className="text-lg md:text-xl text-slate-300 max-w-2xl mx-auto mb-12 leading-relaxed"
           >
-            Courage-based, brain-informed tools rooted in Adlerian psychology. Whether you're stuck in your own head, helping clients get unstuck, or studying the brain itself, we build resources that close the gap between knowing and doing.
+            Courage-based, brain-informed tools rooted in Adlerian psychology. Whether you're stuck in your own head, helping clients get unstuck, or studying the brain itself, I build resources that close the gap between knowing and doing.
           </motion.p>
 
           <motion.div 
@@ -147,31 +147,31 @@ const HomePage = () => {
 
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-16">
           <div className="w-full md:w-1/2">
-             <div className="relative">
+             <div className="relative pr-12 pb-12">
                {/* Stacked Glass Cards Effect */}
                <GlassCard className="aspect-square flex items-center justify-center relative z-20">
                  <div className="text-center p-8">
                    <Layers className="w-12 h-12 mx-auto text-pink-300 mb-4 opacity-80" />
                    <h4 className="text-2xl font-serif mb-2">The Gap</h4>
-                   <p className="text-slate-400 text-sm">We bridge the divide between cognitive understanding and behavioral change.</p>
+                   <p className="text-slate-400 text-sm">Bridging the divide between cognitive understanding and behavioral change.</p>
                  </div>
                </GlassCard>
-               <div className="absolute top-6 left-6 w-full h-full border border-white/10 rounded-3xl z-10 bg-white/5 backdrop-blur-sm transform rotate-3" />
-               <div className="absolute top-12 left-12 w-full h-full border border-white/5 rounded-3xl z-0 bg-white/5 backdrop-blur-sm transform rotate-6" />
+               <div className="absolute top-6 left-6 w-[calc(100%-3rem)] h-[calc(100%-3rem)] border border-white/10 rounded-3xl z-10 bg-white/5 backdrop-blur-sm transform rotate-3" />
+               <div className="absolute top-12 left-12 w-[calc(100%-3rem)] h-[calc(100%-3rem)] border border-white/5 rounded-3xl z-0 bg-white/5 backdrop-blur-sm transform rotate-6" />
              </div>
           </div>
 
           <div className="w-full md:w-1/2">
             <h2 className="text-4xl font-serif mb-6">Not just generic advice. <br/> <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-300 to-orange-300">Psychology in action.</span></h2>
             <p className="text-slate-300 mb-8 leading-relaxed">
-              Most self-help tells you to "be confident." We tell you to have courage. Adlerian psychology teaches that all behavior is purposeful, that motivation is movement (not a feeling), and that encouragement is the most powerful force for change. Whether you're working on yourself, helping clients, or training your brain, that philosophy drives everything we build.
+              Most self-help tells you to "be confident." I tell you to have courage. Adlerian psychology teaches that all behavior is purposeful, that motivation is movement (not a feeling), and that encouragement is the most powerful force for change. Whether you're working on yourself, helping clients, or training your brain, that philosophy drives everything I build.
             </p>
             
             <div className="grid grid-cols-2 gap-4">
               {[
                 { label: "Adlerian Roots", desc: "Purpose-driven behavior" },
                 { label: "Brain-Informed", desc: "Grounded in neuroscience" },
-                { label: "Visual Tools", desc: "See it to believe it" },
+                { label: "For Visual Learners", desc: "See it to get it" },
                 { label: "Action First", desc: "Confidence follows" }
               ].map((item, i) => (
                 <div key={i} className="p-4 border border-white/10 rounded-xl bg-white/5 hover:bg-white/10 transition-colors">
